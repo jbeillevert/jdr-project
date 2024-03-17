@@ -1,0 +1,72 @@
+<form class="flex flex-col gap-4" (submit)="createCharacter()">
+    <h2 class="text-2xl font-bold tracking-tight">Créer un personnage</h2>
+    <div class="border border-solid border-slate-200 rounded-md p-4 shadow flex flex-col w-80 gap-4">
+        <div class="flex flex-col gap-0">
+        <h3 class="font-semibold text-base tracking-tight">Identité</h3>
+        <p class="tracking-tight text-sm text-slate-400">Définir l'identité de votre personnage</p>
+    </div>
+    <div class="flex flex-col gap-2">
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="nominput">Nom</label>
+            <input class="inputtextandnumber"  type="text" name="nominput" placeholder="Lalo Salamanca" [(ngModel)]="character.nominput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="classeinput">Classe</label>
+            <input class="inputtextandnumber"  type="text" name="classeinput" placeholder="Brigand" [(ngModel)]="character.classeinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="alignementinput">Alignement</label>
+            <input class="inputtextandnumber"  type="text" name="alignementinput" placeholder="Démon" [(ngModel)]="character.alignementinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="raceinput">Race</label>
+            <input class="inputtextandnumber"  type="text" name="raceinput" placeholder="Hispanique" [(ngModel)]="character.raceinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="experienceinput">Experience</label>
+            <input class="inputtextandnumber"  type="text" name="experienceinput" placeholder="Confirmé" [(ngModel)]="character.experienceinput">
+        </div>
+    </div>
+</div>
+<div class="border border-solid border-slate-200 rounded-md p-4 shadow flex flex-col w-80 gap-4">
+    <div class="flex flex-col gap-0">
+        <h3 class="font-semibold text-base tracking-tight">Statistiques</h3>
+        <p class="tracking-tight text-sm text-slate-400">Créer les caractéristiques de votre personnage</p>
+    </div>
+    <div class="flex flex-col gap-2">
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="forceinput">Force</label>
+            <input class="inputtextandnumber"  type="number" name="forceinput" placeholder="15" [(ngModel)]="character.forceinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="dexteriteinput">Dextérité</label>
+            <input class="inputtextandnumber"  type="number" name="dexteriteinput" placeholder="15" [(ngModel)]="character.dexteriteinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="constitutioninput">Constitution</label>
+            <input class="inputtextandnumber"  type="number" name="constitutioninput" placeholder="15" [(ngModel)]="character.constitutioninput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="intelligenceinput">Intelligence</label>
+            <input class="inputtextandnumber"  type="number" name="intelligenceinput" placeholder="15" [(ngModel)]="character.intelligenceinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="sagesseinput">Sagesse</label>
+            <input class="inputtextandnumber"  type="number" name="sagesseinput" placeholder="15" [(ngModel)]="character.sagesseinput">
+        </div>
+        <div class="flex justify-between">
+            <label class="text-sm font-semibold tracking-tight" for="charismeinput">Charisme</label>
+            <input class="inputtextandnumber"  type="number" name="charismeinput" placeholder="15" [(ngModel)]="character.charismeinput">
+        </div>
+    </div>
+</div>
+<div class="border border-solid border-slate-200 rounded-md p-4 shadow flex flex-col w-80 gap-4">
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-0">
+            <h3 class="font-semibold text-base tracking-tight">Création</h3>
+            <p class="tracking-tight text-sm text-slate-400">Confirmer l'enregistrement du personnage</p>
+        </div>
+        <input type="submit" class="bg-teal-600 rounded-md py-2 font-semibold text-white tracking-tight" value="Créer">
+    </div>
+</div>
+</form>

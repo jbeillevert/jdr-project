@@ -1,0 +1,20 @@
+<div class="border border-solid border-slate-200 rounded-md p-4 h-fit shadow flex w-60 gap-4 flex-col">
+    <div class="flex flex-col gap-1">
+        <p class="font-semibold text-sm tracking-tight">{{ character.nominput }}</p>
+        <div class="flex flex-col">
+            <p class="text-sm tracking-tight">{{ character.classeinput }}</p>
+            <p class="text-sm tracking-tight">{{ character.alignementinput }}</p>
+            <p class="text-sm tracking-tight">{{ character.raceinput }}</p>
+        </div>
+        <p class="text-xs tracking-tighter text-neutral-300">{{ character.experienceinput }}</p>
+    </div>
+    <div class="flex flex-col gap-1">
+        <div *ngFor="let stat of ['Force', 'Dextérité', 'Constitution', 'Intelligence', 'Sagesse', 'Charisme']">
+            <div class="flex flex-col gap-0">
+              <p class="text-sm tracking-tight">{{ stat }}</p>
+              <p class="text-sm font-semibold tracking-tight">{{ character[stat.toLowerCase() + 'input'] }}</p>
+            </div>
+          </div>
+    </div>
+    <button class="font-semibold text-sm border border-solid border-slate-200 rounded py-2 hover:bg-slate-50 duration-200" (click)="deleteCharacter()">Supprimer</button>
+</div>

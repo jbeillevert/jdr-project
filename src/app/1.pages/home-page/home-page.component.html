@@ -1,48 +1,19 @@
-<div class="h-screen w-full p-4 relative">
-    <section class="flex flex-col gap-4">
-        <div class="border border-solid border-slate-200 rounded-md p-4 shadow flex w-80 gap-4">
-            <div class="w-10 h-10 bg-black rounded-full"></div>
-            <div class="flex flex-col gap-1">
-                <p class="font-semibold text-sm tracking-tight">Nom du joueur</p>
-                <div class="flex flex-col">
-                    <p class="text-sm tracking-tight">classe et niveau</p>
-                    <p class="text-sm tracking-tight">Alignement</p>
-                    <p class="text-sm tracking-tight">Race</p>
-                </div>
-                <p class="text-xs tracking-tighter text-neutral-300">Experience</p>
-            </div>
-        </div>
+<div class="min-h-screen w-full p-8">
+    
+    
+    <section class="flex gap-4">
 
-        <div class="border border-solid border-slate-200 rounded-md p-4 shadow flex flex-col w-80 gap-4">
-            <div class="flex flex-col gap-2">
-                <h2 class="font-semibold text-base tracking-tight">Statistiques</h2>
-                <p class="tracking-tight text-sm text-neutral-500">Controler les caractéristiques de son personnage</p>
-            </div>
-            <div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
-                <div>
-                    <label for="forceinput">Force</label>
-                    <input type="number" name="forceinput" disabled value="15">
-                </div>
+        <app-create-carachter></app-create-carachter>
+    
+        <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-bold tracking-tight">Voir vos personnages</h2>
+            <div class="grid grid-cols-3 gap-4">
+                    <app-display-carachter
+                        *ngFor="let character of characters"
+                        [character]="character"
+                        (deleteCharacterEvent)="deleteCharacter($event)"
+                    ></app-display-carachter>
+
             </div>
         </div>
 
